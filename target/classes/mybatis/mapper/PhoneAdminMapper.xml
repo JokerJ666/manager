@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manager.mapper.manager.PhoneAdminMapper">
+
+    <sql id="tableName">
+        phoneadmin
+    </sql>
+
+    <!-- 字段 -->
+    <sql id="Field">
+        username,
+        companyId
+    </sql>
+
+    <!-- 字段值 -->
+    <sql id="FieldValue">
+        #{username},
+        #{companyId}
+    </sql>
+
+
+    <insert id="saveUser" parameterType="com.manager.pojo.PhoneAdmin">
+        insert into<include refid="tableName"/>
+        (<include refid="Field"/>)
+        values
+        (<include refid="FieldValue"/>)
+    </insert>
+
+    <select id="queryByUsername" resultType="com.manager.pojo.PhoneAdmin">
+        select *
+        from <include refid="tableName"/>
+        where username=#{username}
+    </select>
+
+    <select id="existByUsername" resultType="integer">
+        select COUNT(*)
+        from <include refid="tableName"/>
+        where username=#{username}
+    </select>
+
+    <select id="listUserByCompanyId" resultType="com.manager.pojo.PhoneAdmin">
+        select *
+        from <include refid="tableName"></include>
+        where companyId=#{companyId}
+    </select>
+
+</mapper>

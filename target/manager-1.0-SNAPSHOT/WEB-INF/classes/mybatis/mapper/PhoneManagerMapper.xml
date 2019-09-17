@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manager.mapper.manager.PhoneManagerMapper">
+
+    <sql id="tableName">
+        phonemanager
+    </sql>
+
+    <!-- 字段 -->
+    <sql id="Field">
+        userKey,
+        createDate,
+        note,
+        companyId
+    </sql>
+
+    <!-- 字段值 -->
+    <sql id="FieldValue">
+        #{userKey},
+        #{createDate},
+        #{note},
+        #{companyId}
+    </sql>
+
+    <resultMap id="PhoneUserResultMap" type="com.manager.pojo.PhoneManager">
+        <id column="id" property="id"/>
+        <result column="userKey" property="userKey"/>
+        <result column="state" property="state"/>
+        <result column="createDate" property="createDate"/>
+        <result column="note" property="note"/>
+        <result column="permission" property="permission"/>
+        <result column="companyId" property="companyId"/>
+        <association property="company"
+                     select="com.manager.mapper.manager.CompanyMapper.queryById" column="companyId">
+        </association>
+    </resultMap>
+
+
+    <resultMap id="phoneUserIdAndLoginTimeResultMap" type="java.util.HashMap">
+        <result column="id" property="id"/>
+        <result column="lastLoginTime" property="lastLoginTime"/>
+
+    </resultMap>
+
+    <!-- 查询所有用户 -->
+    <select id="queryAllResultMap" resultMap="PhoneUserResultMap">
+        SELECT *
+        FROM <include refid="tableName"/>
+        order by id asc
+    </select>
+
+    <select id="queryAll" resultType="com.manager.pojo.PhoneManager">
+        SELECT *
+        FROM <include refid="tableName"/>
+        order by id asc
+    </select>
+
+    <select id="queryAllByCompanyId" resultType="com.manager.pojo.PhoneManager">
+        SELECT *
+        FROM <include refid="tableName"/>
+        where companyId = #{companyId}
+        order by id asc
+    </select>
+
+
+    <select id="queryById" parameterType="integer" resultType="com.manager.pojo.PhoneManager">
+        SELECT *
+        FROM <include refid="tableName"/>
+        WHERE id = #{id}
+    </select>
+
+    <!-- 根据id进行删除  -->
+    <delete id="deleteById">
+        delete
+        from <include refid="tableName"/>
+        where id = #{id}
+    </delete>
+
+
+    <update id="updateUserPermission">
+        update
+        <include refid="tableName"></include>
+        <set>
+            permission = #{userPermission}
+        </set>
+        where
+        id = #{id}
+    </update>
+
+    <update id="updateUserSelective" parameterType="com.manager.pojo.PhoneManager">
+        update
+        <include refid="tableName"/>
+        <set>
+            <if test="state!='' and state!=null ">
+                state=#{state},
+            </if>
+            <if test="userKey!='' and userKey!=null ">
+                userKey=#{userKey},
+            </if>
+            <if test="createDate!='' and createDate!=null ">
+                createDate=#{createDate},
+            </if>
+            <if test="permission !='' and permission!=null ">
+                permission=#{permission},
+            </if>
+            <if test="note!=''and note!=null ">
+                note=#{note},
+            </if>
+            <if test="lastLoginTime !='' and lastLoginTime!=null ">
+                lastLoginTime=#{lastLoginTime},
+            </if>
+            <if test="companyId!=''and companyId!=null ">
+                companyId=#{companyId},
+            </if>
+        </set>
+        where
+        id = #{id}
+    </update>
+
+    <update id="updateUserState">
+        update
+        <include refid="tableName"></include>
+        <set>
+            state = #{state}
+        </set>
+        where
+        id = #{id}
+    </update>
+
+    <insert id="saveUser" parameterType="com.manager.pojo.PhoneManager">
+        insert into<include refid="tableName"/>
+        (<include refid="Field"/>)
+        values
+        (<include refid="FieldValue"/>)
+    </insert>
+
+    <select id="CountUserByCompanyId" resultType="integer">
+        select count(*)
+        from <include refid="tableName"/>
+        where companyId=#{companyId}
+    </select>
+
+    <select id="countUserByUserKey" resultType="integer">
+        select count(*)
+        from <include refid="tableName"/>
+        where userKey=#{userKey}
+    </select>
+
+
+    <select id="queryByUserKey" resultType="com.manager.pojo.PhoneManager">
+        select *
+        from <include refid="tableName"></include>
+        where userKey=${userKey}
+    </select>
+
+    <select id="queryAllLoginUsers" resultMap="phoneUserIdAndLoginTimeResultMap">
+        select id,lastLoginTime
+        from <include refid="tableName"/>
+        where state="1"
+    </select>
+
+    <update id="updateUserLastLoginTime">
+        update
+        <include refid="tableName"></include>
+        <set>
+            state=#{state},
+            lastLoginTime=#{lastLoginTime}
+        </set>
+        where
+        userKey = #{userKey}
+    </update>
+
+    <select id="getIdByUserKey" resultType="integer">
+        select id
+        from <include refid="tableName"/>
+        where userKey=#{userKey}
+    </select>
+
+    <select id="getCompanyIdByUserKey" resultType="integer">
+        select companyId
+        from <include refid="tableName"/>
+        where userKey=#{userKey}
+    </select>
+
+    <select id="getPermissionByUserKey" resultType="string">
+        select permission
+        from <include refid="tableName"></include>
+        where userKey=#{userKey}
+    </select>
+
+</mapper>

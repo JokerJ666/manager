@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manager.mapper.log.LoginWithPhoneLogMapper">
+
+    <sql id="tableName">
+        loginwithphonelog
+    </sql>
+
+    <sql id="Field">
+        userId,
+        loginDate,
+        loginType,
+        username,
+        uName,
+        phone,
+        belong
+    </sql>
+
+    <sql id="FieldValue">
+        #{userId},
+        #{loginDate},
+        #{loginType},
+        #{username},
+        #{uName},
+        #{phone},
+        #{belong}
+    </sql>
+
+    <select id="queryUserLoginLog" resultType="com.manager.pojo.LoginWithPhoneLog">
+        select *
+        from <include refid="tableName"></include>
+        where userId = #{userId}
+        order by loginDate desc
+        limit 6
+    </select>
+
+    <insert id="addLog" parameterType="com.manager.pojo.LoginWithPhoneLog">
+        insert into<include refid="tableName"/>
+        (<include refid="Field"/>)
+        values
+        (<include refid="FieldValue"/>)
+    </insert>
+
+
+</mapper>
