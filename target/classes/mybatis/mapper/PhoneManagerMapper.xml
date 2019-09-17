@@ -47,7 +47,7 @@
     <select id="queryAllResultMap" resultMap="PhoneUserResultMap">
         SELECT *
         FROM <include refid="tableName"/>
-        order by id asc
+        order by id desc
     </select>
 
     <select id="queryAll" resultType="com.manager.pojo.PhoneManager">

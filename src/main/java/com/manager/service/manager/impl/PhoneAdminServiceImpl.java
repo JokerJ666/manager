@@ -19,11 +19,21 @@ public class PhoneAdminServiceImpl implements PhoneAdminService {
         return phoneAdminMapper.existByUsername(username)>0;
     }
 
+
+    public boolean ifExist(String username, Integer companyId) {
+        return phoneAdminMapper.findUserByUnameAndCmp(username, companyId)>0;
+    }
+
     public void saveUser(PhoneAdmin phoneAdmin) throws Exception {
         phoneAdminMapper.saveUser(phoneAdmin);
     }
 
     public List<PhoneAdmin> listUserByCompanyId(Integer companyId) {
         return phoneAdminMapper.listUserByCompanyId(companyId);
+    }
+
+
+    public void deleteById(Integer id) {
+        phoneAdminMapper.deleteById(id);
     }
 }

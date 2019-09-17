@@ -39,10 +39,22 @@
         where username=#{username}
     </select>
 
+    <select id="findUserByUnameAndCmp" resultType="integer">
+        select COUNT(*)
+        from <include refid="tableName"/>
+        where username=#{username} and companyId=#{companyId}
+    </select>
+
     <select id="listUserByCompanyId" resultType="com.manager.pojo.PhoneAdmin">
         select *
         from <include refid="tableName"></include>
         where companyId=#{companyId}
     </select>
+
+    <delete id="deleteById">
+        delete
+        from <include refid="tableName"/>
+        where id=#{id}
+    </delete>
 
 </mapper>

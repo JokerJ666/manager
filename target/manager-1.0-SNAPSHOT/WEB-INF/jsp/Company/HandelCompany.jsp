@@ -4,6 +4,17 @@
 <style type="text/css">
     .input_workTime{width: 55px;}
     #workday button{width: 48px !important;}
+    .btn-danger-test {
+        color: #fff;
+        background-color: #d9534f;
+        border-color: #d43f3a;
+        margin-top: 5px;
+        float: right;
+    }
+
+    .content {
+        width: 100px;
+    }
 </style>
 
 
@@ -52,7 +63,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" id="savePhoneUserAdmin">保存用户</button>
+                <button type="button" class="btn btn-primary" id="savePhoneUserAdmin"  data-dismiss="modal">保存用户</button>
             </div>
         </div>
     </div>
@@ -368,6 +379,8 @@
                 if(result.code=="200") {
                     getPhoneAdminList();
                     alert("添加成功！");
+                }else if (result.code=="4001") {
+                    alert("添加失败！该公司下当前用户已经存在!");
                 }
                 else
                     alert("添加失败！管理员用户可能已经存在!");
@@ -393,9 +406,27 @@
         var users = result.map.AdminUserList;
         $.each(users,function (index,user) {
             var username = $("<td></td>").append(user.username);
-            $("<tr></tr>").append(username)
+            var deleteBtn=$("<button></button>").addClass("btn-danger-test").append("删除");
+            deleteBtn.click(function () {
+                deleteCompanyUser(user.id,user.userKey);
+            });
+            $("<tr></tr>").append(username).append(deleteBtn)
                 .appendTo("#Show_PhoneAdminList tbody");
         })
+    }
+
+    function deleteCompanyUser(id,userKey) {
+        if(confirm("当前操作的用户为:【"+userKey+"】\n确认删除吗？")){
+            $.ajax({
+                url:"${ctx}/company/deleteUser/id="+id,
+                type:"GET",
+                success:function(result){
+                    getPhoneAdminList();
+                    alert("删除成功！");
+                    to_page(nowPage);
+                }
+            })
+        }
     }
 
 </script>

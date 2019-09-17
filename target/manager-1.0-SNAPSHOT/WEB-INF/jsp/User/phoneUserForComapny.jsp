@@ -3,6 +3,12 @@
 
 <style>
     .pagination li{cursor: pointer;}
+
+    .col-type {
+        padding-top: 7px;
+        margin-bottom: 0;
+        text-align: right;
+    }
 </style>
 
 <div class="modal fade" id="editPhoneUserModal" tabindex="0" role="dialog" aria-labelledby="myModalLabel">
@@ -20,11 +26,18 @@
                             <input name="note" class="form-control" id="edit_note">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="edit_number">串号:</label>
+                        <div class="col-sm-8">
+                            <input name="userKey" class="form-control" id="edit_number">
+                        </div>
+                    </div>
+
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" id="save_editUser">保存用户</button>
+                <button type="button" class="btn btn-primary" id="save_editUser" data-dismiss="modal">保存用户</button>
             </div>
         </div>
     </div>
@@ -57,7 +70,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" id="savePhoneUser">保存用户</button>
+                <button type="button" class="btn btn-primary" id="savePhoneUser"  data-dismiss="modal">保存用户</button>
             </div>
         </div>
     </div>
@@ -174,7 +187,7 @@
 
             var editBtn=$("<button></button>").addClass("btn btn-primary btn-sm edit_btn").append("编辑");
             editBtn.click(function () {
-                editPhoneUserById(user.id);
+                editPhoneUserById(user.id, user.userKey, user.note);
             });
 
             var chanePermissionBtn;
@@ -303,8 +316,10 @@
         });
     });
 
-    function editPhoneUserById(id) {
+    function editPhoneUserById(id, userKey, note) {
         $("#editPhoneUserModal").data("uid",id);
+        $("#edit_note").val(note);
+        $("#edit_number").val(userKey);
         $("#editPhoneUserModal").modal({
             backdrop:"static"
         });

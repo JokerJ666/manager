@@ -69,6 +69,13 @@ public class CompanyController {
     @RequestMapping(value = "/saveAdminUser",method = RequestMethod.POST)
     public Msg SaveAdminUser(PhoneAdmin phoneAdmin){
         try {
+            //判断当前公司下是否存在该用户
+            if (phoneAdminService.ifExist(phoneAdmin.getUsername(),phoneAdmin.getCompanyId())){
+                Msg msg = new Msg();
+                msg.setCode(4001);
+                msg.setMsg("该公司已存在该用户！");
+                return msg;
+            }
             phoneAdminService.saveUser(phoneAdmin);
             return Msg.success();
         } catch (Exception e) {
@@ -150,6 +157,13 @@ public class CompanyController {
             return Msg.error();
         }
         companyService.deleteById(id);
+        return Msg.success();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/deleteUser/id={id}",method = RequestMethod.GET)
+    public Msg DeleteUserById(@PathVariable("id") Integer id){
+        phoneAdminService.deleteById(id);
         return Msg.success();
     }
 
