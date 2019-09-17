@@ -23,6 +23,7 @@ public class SystemController {
     public Msg Login(SystemUser systemUser, HttpServletRequest request){
         if(systemUserService.existByUser(systemUser)){
             request.getSession().setAttribute("user",systemUser);
+            
             return Msg.success();
         }
         return Msg.error();
