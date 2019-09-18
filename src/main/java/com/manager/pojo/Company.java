@@ -51,8 +51,8 @@ public class Company {
 
     private Integer maintainNum;
 
-    private String cloudServerInformation;
-    private String amountPackage;
+    private String cloudServerInformation;  //商业云信息
+    private String amountPackage;           //套餐信息
 
     public String getCloudServerInformation() {
         return cloudServerInformation;
