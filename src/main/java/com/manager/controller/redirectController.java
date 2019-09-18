@@ -1,15 +1,22 @@
 package com.manager.controller;
 
+import com.manager.pojo.Company;
+import com.manager.service.manager.CompanyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.List;
+
 
 @Controller
 public class redirectController {
 
+    @Autowired
+    private CompanyService companyService;
 
     @RequestMapping(value = "/login")
     public String ToLogin(){
@@ -20,6 +27,14 @@ public class redirectController {
     @RequestMapping(value = "/company")
     public String ToCompany(Model model){
         model.addAttribute("page","company");
+        return "/Company/Main";
+    }
+
+    @RequestMapping(value = "/userForm")
+    public String ToUserForm(Model model){
+        List<Company> companies = companyService.queryAll();
+        model.addAttribute("companies",companies);
+        model.addAttribute("page","userForm");
         return "/Company/Main";
     }
 

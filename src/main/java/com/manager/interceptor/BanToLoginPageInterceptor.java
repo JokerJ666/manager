@@ -11,7 +11,6 @@ public class BanToLoginPageInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("到了！");
         Object user = request.getSession().getAttribute("user");
         if (user instanceof SystemUser) {
             response.sendRedirect(request.getContextPath()+ UrlConst.MAIN);

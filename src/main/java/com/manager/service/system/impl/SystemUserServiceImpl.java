@@ -24,4 +24,9 @@ public class SystemUserServiceImpl implements SystemUserService {
     public boolean existByUser(SystemUser systemUser) {
         return systemUserMapper.existByUser(systemUser)==1;
     }
+
+
+    public SystemUser findSystemUser(SystemUser systemUser) {
+        return systemUserMapper.findSystemUser(systemUser);
+    }
 }

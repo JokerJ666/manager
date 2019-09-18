@@ -9,18 +9,20 @@
 
     <!-- 字段 -->
     <sql id="Field">
-        id,
         username,
         password,
-        name
+        name,
+        company,
+        privilege
     </sql>
 
     <!-- 字段值 -->
     <sql id="FieldValue">
-        #{id},
         #{username},
         #{password},
-        #{name}
+        #{name},
+        #{company},
+        #{privilege}
     </sql>
 
     <select id="existUserByUsername" resultType="Integer">
@@ -31,6 +33,13 @@
 
     <select id="existByUser" resultType="Integer"  parameterType="com.manager.pojo.SystemUser">
         select COUNT(*)
+        from <include refid="tableName"/>
+        where username=#{username} and password=#{password}
+    </select>
+
+
+    <select id="findSystemUser" resultType="com.manager.pojo.SystemUser" parameterType="com.manager.pojo.SystemUser">
+        select *
         from <include refid="tableName"/>
         where username=#{username} and password=#{password}
     </select>

@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<div class="panel panel-default" style="width: 380px;margin: 0 auto;">
+<div class="panel panel-default" style="width: 380px;margin: 0 auto;margin-top: 130px">
     <div class="panel-body">
         <ul class="list-group">
             <li class="list-group-item">
@@ -18,7 +18,7 @@
                         <input type="password" name="password" class="form-control" id="passwordInput" placeholder="请输入密码...">
                     </div>
                 </form>
-                <button id="login_btn" class="btn btn-primary" style="float: right;width: 72px;">登入</button>
+                <button id="login_btn" class="btn btn-primary" style="float: right;width: 72px;margin-top: 20px">登入</button>
             </li>
         </ul>
     </div>
