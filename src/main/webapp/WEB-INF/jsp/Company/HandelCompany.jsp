@@ -2,8 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <style type="text/css">
-    .input_workTime{width: 55px;}
-    #workday button{width: 48px !important;}
+    .input_workTime {
+        width: 55px;
+    }
+
+    #workday button {
+        width: 48px !important;
+    }
+
     .btn-danger-test {
         color: #fff;
         background-color: #d9534f;
@@ -22,7 +28,8 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
                 <h4 class="modal-title">公司的管理员用户</h4>
             </div>
             <div class="modal-body">
@@ -48,7 +55,8 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
                 <h4 class="modal-title">新增手机管理员用户</h4>
             </div>
             <div class="modal-body">
@@ -63,7 +71,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" id="savePhoneUserAdmin"  data-dismiss="modal">保存用户</button>
+                <button type="button" class="btn btn-primary" id="savePhoneUserAdmin" data-dismiss="modal">保存用户</button>
             </div>
         </div>
     </div>
@@ -134,24 +142,30 @@
                     </div>
                     <div class="row">
                         <form id="workTime_Form">
-                                <label class="col-sm-2 control-label">工作时间段一:</label>
-                                <div class="col-md-2">
-                                    <input type="text" placeholder="00:00" class="datetimepicker input_workTime beginTime" name="begin1" autocomplete="off" >
-                                    至
-                                    <input type="text" placeholder="00:00" class="datetimepicker input_workTime endTime" name="end1" autocomplete="off" >
-                                </div>
-                                <label class="col-sm-2 control-label">工作时间段二:</label>
-                                <div class="col-md-2">
-                                    <input type="text" placeholder="00:00" class="datetimepicker input_workTime beginTime" name="begin2" autocomplete="off" >
-                                    至
-                                    <input type="text" placeholder="00:00" class="datetimepicker input_workTime endTime" name="end2" autocomplete="off" >
-                                </div>
-                                <label class="col-sm-2 control-label">工作时间段三:</label>
-                                <div class="col-md-2">
-                                    <input type="text" placeholder="00:00"  class="datetimepicker input_workTime beginTime" name="begin3" autocomplete="off" >
-                                    至
-                                    <input type="text" placeholder="00:00" class="datetimepicker input_workTime endTime" name="end3" autocomplete="off" >
-                                </div>
+                            <label class="col-sm-2 control-label">工作时间段一:</label>
+                            <div class="col-md-2">
+                                <input type="text" placeholder="00:00" class="datetimepicker input_workTime beginTime"
+                                       name="begin1" autocomplete="off">
+                                至
+                                <input type="text" placeholder="00:00" class="datetimepicker input_workTime endTime"
+                                       name="end1" autocomplete="off">
+                            </div>
+                            <label class="col-sm-2 control-label">工作时间段二:</label>
+                            <div class="col-md-2">
+                                <input type="text" placeholder="00:00" class="datetimepicker input_workTime beginTime"
+                                       name="begin2" autocomplete="off">
+                                至
+                                <input type="text" placeholder="00:00" class="datetimepicker input_workTime endTime"
+                                       name="end2" autocomplete="off">
+                            </div>
+                            <label class="col-sm-2 control-label">工作时间段三:</label>
+                            <div class="col-md-2">
+                                <input type="text" placeholder="00:00" class="datetimepicker input_workTime beginTime"
+                                       name="begin3" autocomplete="off">
+                                至
+                                <input type="text" placeholder="00:00" class="datetimepicker input_workTime endTime"
+                                       name="end3" autocomplete="off">
+                            </div>
                         </form>
                     </div>
                     <div class="row">
@@ -167,47 +181,50 @@
                 </div>
             </div>
 
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
                     <form id="maintain_Form">
-                        <div class="col-md-5">
-                            <label class="col-sm-5 control-label" for="remainingTime_input">维护时间:</label>
-                            <div class="col-md-2">
-                                <input type="text" placeholder="00:00" id="remainingTime_input" class="datetimepicker2" name="remainingTime" autocomplete="off" >
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-sm-5 control-label" for="remainingTime_input">维护时间:</label>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control datetimepicker2" placeholder="00:00" id="remainingTime_input"
+                                             name="remainingTime" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="col-sm-5 control-label" for="maintainNum_input">剩余维护次数:</label>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control" name="maintainNum" autocomplete="off" id="maintainNum_input">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <label class="col-sm-5 control-label" for="maintainNum_input">剩余维护次数:</label>
-                            <div class="col-md-2">
-                                <input type="text" name="maintainNum" autocomplete="off" id="maintainNum_input">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-sm-5 control-label"
+                                       for="cloudServerInformation_input">购买商业云价位:</label>
+                                <div class="col-md-7">
+                                    <textarea rows="4" class="form-control" name="cloudServerInformation" autocomplete="off"
+                                               id="cloudServerInformation_input"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="col-sm-5 control-label" for="amountPackage_input">套餐信息:</label>
+                                <div class="col-md-7">
+                                    <textarea rows="4" class="form-control"  name="amountPackage" autocomplete="off" id="amountPackage_input"></textarea>
+                                </div>
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="row">
-                    <div class="col-md-5">
-                        <label class="col-sm-5 control-label" for="cloudServerInformation_input">购买商业云价位:</label>
+                    <div class="row">
+                        <div class="col-md-1"></div>
                         <div class="col-md-2">
-                            <input type="text" name="cloudServerInformation" autocomplete="off" id="cloudServerInformation_input">
+                            <button type="button" class="btn btn-primary" id="save_maintain">保存维护设置</button>
                         </div>
-                    </div>
-                    <div class="col-md-5">
-                        <label class="col-sm-5 control-label" for="amountPackage_input">套餐信息:</label>
-                        <div class="col-md-2">
-                            <input type="text" name="amountPackage" autocomplete="off" id="amountPackage_input">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-2">
-                        <button type="button" class="btn btn-primary" id="save_maintain">保存维护设置</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div>
         <ul class="nav nav-tabs">
@@ -216,7 +233,7 @@
     </div>
 
     <div class="panel panel-default" id="showPhoneList">
-        <div class="panel-body" >
+        <div class="panel-body">
             <jsp:include page="../User/phoneUserForComapny.jsp"/>
         </div>
     </div>
@@ -226,15 +243,15 @@
 <script type="text/javascript">
 
     $(function () {
-        document.title="所有用户";
+        document.title = "所有用户";
         ShowCompany();
     });
 
-    function ShowCompany(){
+    function ShowCompany() {
         $.ajax({
-            url:"${ctx}/company/getData/id="+${companyId},
-            type:"GET",
-            success:function (result) {
+            url: "${ctx}/company/getData/id=" +${companyId},
+            type: "GET",
+            success: function (result) {
                 var company = result.map.company;
                 $("#companyName").text(company.companyName);
                 $("#companyCode").text(company.companyCreditCode);
@@ -244,22 +261,24 @@
                 $("#address").text(company.address);
                 $("#remainingTime_input").val(company.remainingTime);
                 $("#maintainNum_input").val(company.maintainNum);
+                $("#cloudServerInformation_input").val(company.cloudServerInformation);
+                $("#amountPackage_input").val(company.amountPackage);
                 activeWorkday(company.workday);
                 var beginTimeList = company.beginTime.split(",");
                 var index = 0;
                 $(".beginTime").each(function () {
                     var beginTime = "00:00";
-                    if(index<beginTimeList.length)
-                        beginTime=beginTimeList[index];
+                    if (index < beginTimeList.length)
+                        beginTime = beginTimeList[index];
                     index++;
                     $(this).val(beginTime);
                 });
                 var endTimeList = company.endTime.split(",");
-                index=0;
+                index = 0;
                 $(".endTime").each(function () {
                     var endTime = "00:00";
-                    if(index<endTimeList.length)
-                        endTime=endTimeList[index];
+                    if (index < endTimeList.length)
+                        endTime = endTimeList[index];
                     index++;
                     $(this).val(endTime);
                 })
@@ -268,28 +287,28 @@
     }
 
     $("#save_maintain").click(function () {
-        var data = $("#maintain_Form").serialize()+"&id="+${companyId};
+        var data = $("#maintain_Form").serialize() + "&id=" +${companyId};
         console.log(data);
         $.ajax({
-            url:"${ctx}/company/edit",
-            type:"POST",
-            data:data,
-            success:function (result) {
-                 if(result.code=="200")
-                     alert("修改成功！");
-                 else
-                     alert("修改失败！");
+            url: "${ctx}/company/edit",
+            type: "POST",
+            data: data,
+            success: function (result) {
+                if (result.code == "200")
+                    alert("修改成功！");
+                else
+                    alert("修改失败！");
             }
-       })
+        })
     });
 
     function activeWorkday(workday) {
-        if(workday==null||workday==="")
+        if (workday == null || workday === "")
             return;
         var day = workday.split(",");
-        var i=0;
+        var i = 0;
         $("#workday_button-group button").each(function () {
-            if(i<day.length && day[i]!=null && $(this).index()===Number(day[i])){
+            if (i < day.length && day[i] != null && $(this).index() === Number(day[i])) {
                 i++;
                 $(this).addClass("active");
             }
@@ -297,9 +316,9 @@
     }
 
     function getLocalTime(nS) {
-        if (nS===null)
+        if (nS === null)
             return;
-        return new Date(parseInt(nS)).toLocaleString().replace(/:\d{1,2}$/,' ');
+        return new Date(parseInt(nS)).toLocaleString().replace(/:\d{1,2}$/, ' ');
     }
 
     $(".datetimepicker").datetimepicker({
@@ -309,7 +328,7 @@
         startView: 1,
         minView: 0,
         maxView: 1,
-        clearBtn:true,//清除按钮
+        clearBtn: true,//清除按钮
         forceParse: 0
     });
 
@@ -317,40 +336,40 @@
         format: 'yyyy-mm-dd',
         language: 'zh-CN',
         autoclose: 1,
-        startDate:new Date(),
+        startDate: new Date(),
         startView: 4,
         minView: 2,
         maxView: 4,
-        clearBtn:true,//清除按钮
+        clearBtn: true,//清除按钮
         forceParse: 0
     });
 
     $("#workday_button-group button").click(function () {
-        if($(this).hasClass("active"))
+        if ($(this).hasClass("active"))
             $(this).removeClass("active");
         else
             $(this).addClass("active");
     });
 
-    function getWorkday(){
-        var workday="";
+    function getWorkday() {
+        var workday = "";
         $("#workday_button-group button").each(function () {
-            if($(this).hasClass("active")){
-                workday+=$(this).index().toString()+",";
+            if ($(this).hasClass("active")) {
+                workday += $(this).index().toString() + ",";
             }
         });
-        if(workday.length>0)
-            workday=workday.substr(0,workday.length-1);
+        if (workday.length > 0)
+            workday = workday.substr(0, workday.length - 1);
         return workday;
     }
 
     $("#save_workTime").click(function () {
-        var data = $("#workTime_Form").serialize()+"&workday="+getWorkday()+"&id="+${companyId};
+        var data = $("#workTime_Form").serialize() + "&workday=" + getWorkday() + "&id=" +${companyId};
         $.ajax({
-            url:"${ctx}/company/saveWorkTime",
-            type:"POST",
-            data:data,
-            success:function () {
+            url: "${ctx}/company/saveWorkTime",
+            type: "POST",
+            data: data,
+            success: function () {
                 alert("修改成功！")
             }
         });
@@ -358,31 +377,30 @@
 
     $("#ToSavePhoneUserAdmin").click(function () {
         $("#addPhoneAdminUserModal").modal({
-            backdrop:"static"
+            backdrop: "static"
         });
     });
 
     $("#Show_PhoneAdmin").click(function () {
         getPhoneAdminList();
         $("#ShowPhoneAdminUserModal").modal({
-            backdrop:"static"
+            backdrop: "static"
         });
     });
 
     $("#savePhoneUserAdmin").click(function () {
-        var data = $("#addPhoneAdminUser_from").serialize()+"&companyId="+${companyId};
+        var data = $("#addPhoneAdminUser_from").serialize() + "&companyId=" +${companyId};
         $.ajax({
-            url:"${ctx}/company/saveAdminUser",
-            type:"POST",
-            data:data,
-            success:function (result) {
-                if(result.code=="200") {
+            url: "${ctx}/company/saveAdminUser",
+            type: "POST",
+            data: data,
+            success: function (result) {
+                if (result.code == "200") {
                     getPhoneAdminList();
                     alert("添加成功！");
-                }else if (result.code=="4001") {
+                } else if (result.code == "4001") {
                     alert("添加失败！该公司下当前用户已经存在!");
-                }
-                else
+                } else
                     alert("添加失败！管理员用户可能已经存在!");
                 $("#addPhoneAdminUser_from input").each(function () {
                     $(this).val("");
@@ -393,9 +411,9 @@
 
     function getPhoneAdminList() {
         $.ajax({
-            url:"${ctx}/company/phoneAdminList?companyId="+${companyId},
-            type:"GET",
-            success:function (result) {
+            url: "${ctx}/company/phoneAdminList?companyId=" +${companyId},
+            type: "GET",
+            success: function (result) {
                 buildPhoneAdminUserListTable(result);
             }
         });
@@ -404,23 +422,23 @@
     function buildPhoneAdminUserListTable(result) {
         $("#Show_PhoneAdminList tbody").empty();
         var users = result.map.AdminUserList;
-        $.each(users,function (index,user) {
+        $.each(users, function (index, user) {
             var username = $("<td></td>").append(user.username);
-            var deleteBtn=$("<button></button>").addClass("btn-danger-test").append("删除");
+            var deleteBtn = $("<button></button>").addClass("btn-danger-test").append("删除");
             deleteBtn.click(function () {
-                deleteCompanyUser(user.id,user.userKey);
+                deleteCompanyUser(user.id, user.userKey);
             });
             $("<tr></tr>").append(username).append(deleteBtn)
                 .appendTo("#Show_PhoneAdminList tbody");
         })
     }
 
-    function deleteCompanyUser(id,userKey) {
-        if(confirm("当前操作的用户为:【"+userKey+"】\n确认删除吗？")){
+    function deleteCompanyUser(id, userKey) {
+        if (confirm("当前操作的用户为:【" + userKey + "】\n确认删除吗？")) {
             $.ajax({
-                url:"${ctx}/company/deleteUser/id="+id,
-                type:"GET",
-                success:function(result){
+                url: "${ctx}/company/deleteUser/id=" + id,
+                type: "GET",
+                success: function (result) {
                     getPhoneAdminList();
                     alert("删除成功！");
                     to_page(nowPage);
