@@ -53,4 +53,26 @@
     </insert>
 
 
+    <update id="update" parameterType="com.manager.pojo.SystemUser">
+        update
+        <include refid="tableName"/>
+        <set>
+            <if test="password!='' and password!=null ">
+                password=#{password},
+            </if>
+            <if test="name!='' and name!=null ">
+                name=#{name},
+            </if>
+            <if test="company!='' and company!=null ">
+                company=#{company},
+            </if>
+            <if test="privilege !='' and privilege!=null ">
+                privilege=#{privilege},
+            </if>
+        </set>
+        where
+        username = #{username}
+    </update>
+
+
 </mapper>

@@ -8,6 +8,8 @@ public interface SystemUserMapper {
 
     void save(SystemUser user);
 
+    int update(SystemUser user);
+
     Integer existByUser(SystemUser systemUser);
 
     SystemUser findSystemUser(SystemUser systemUser);

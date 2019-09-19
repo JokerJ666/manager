@@ -9,10 +9,7 @@
                 <h3 style="margin: 0 auto;height: 38px;">用户管理</h3></li>
             <li class="list-group-item">
                 <form id="login_from">
-                    <div class="form-group" id="username_input">
-                        <label for="usernameInput">*账号:</label>
-                        <input type="text" name="username" class="form-control" id="usernameInput" placeholder="请输入账号...">
-                    </div>
+                    <input type="hidden" name="username" value="${ sessionScope.user.username}">
                     <div class="form-group" id="password_input">
                         <label for="passwordInput">*密码:</label>
                         <input type="password" name="password" class="form-control" id="passwordInput">
@@ -25,26 +22,31 @@
                         <label for="nameInput">姓名:</label>
                         <input type="text" name="name" class="form-control" id="nameInput">
                     </div>
-                    <div class="form-group" id="privilege_input">
-                        <label>权限:</label>
-                        <div>
-                            <input type="radio" value="1" checked="checked" name="privilege" >管理员
-                            <input type="radio" value="2" name="privilege">普通用户
+                    <c:if test="${privilege==1}">
+                        <div class="form-group" id="privilege_input">
+                            <label>权限:</label>
+                            <div>
+                                <input type="radio" value="1" checked="checked" name="privilege" >管理员
+                                <input type="radio" value="2" name="privilege">普通用户
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="form-group" id="company_input">
+                            <label for="nameInput">所属公司:</label>
+                            <select name="company" id="companyId" style="width: 95%">
+                                <option value="0">==请选择==</option>
+                                <c:forEach items="${companies}" var="var" varStatus="vs">
+                                    <option value="${var.id}"> ${var.companyName}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                    </c:if>
 
-                    <div class="form-group" id="company_input">
-                        <label for="nameInput">所属公司:</label>
-                        <select name="company" id="companyId" style="width: 95%">
-                            <option value="0">==请选择==</option>
-                            <c:forEach items="${companies}" var="var" varStatus="vs">
-                                <option value="${var.id}"> ${var.companyName}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
                 </form>
-                <button id="save_btn" class="btn btn-primary" style="float: right;width: 72px;margin-top: 20px">保存用户</button>
+                <button id="save_btn" class="btn btn-primary" style="float: right;width: 80px;margin-top: 20px;margin-left: 5px;text-align: center">保存用户</button>
+                <button id="cancel_btn" type="button" class="btn btn-default" style="float: right;width: 72px;margin-top: 20px">取消</button>
+
             </li>
         </ul>
     </div>
@@ -52,7 +54,7 @@
 
 <script type="text/javascript">
     $(function () {
-        document.title="后台管理系统注册";
+        document.title="后台管理系统";
     });
 
     $("#save_btn").click(function () {
@@ -63,12 +65,19 @@
             data:data,
             success:function (result) {
                 if(result.code=="200") {
-                    alert("保存成功！");
-                }
+                    alert(result.msg);
+                    window.location="${ctx}/company";
+                }else if (result.code=="4001"){
+                    alert(result.msg);
+                } 
                 else
                     alert("保存失败!");
             }
         })
+    });
+
+    $("#cancel_btn").click(function () {
+          window.location="${ctx}/company";
     });
 
 

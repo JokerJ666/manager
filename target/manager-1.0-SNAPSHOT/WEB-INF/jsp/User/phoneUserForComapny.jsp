@@ -32,7 +32,12 @@
                             <input name="userKey" class="form-control" id="edit_number">
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="edit_number">常用人姓名:</label>
+                        <div class="col-sm-8">
+                            <input name="usedName" class="form-control" id="edit_usedName">
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
@@ -125,6 +130,7 @@
                     <td>编号</td>
                     <td>串号</td>
                     <td>状态</td>
+                    <td>常用人姓名</td>
                     <td>备注</td>
                     <td>操作</td>
                 </tr>
@@ -179,6 +185,7 @@
             var userKey=$("<td></td>").append(user.userKey);
             var userNote=$("<td></td>").append(user.note);
             var permission=$("<td></td>").append(user.permission);
+            var usedName=$("<td></td>").append(user.usedName);
 
             var showBtn=$("<button></button>").addClass("btn btn-info btn-sm show_btn").append("登入记录");
             showBtn.click(function () {
@@ -206,7 +213,7 @@
             });
             var Btns=$("<td></td>").append(showBtn).append(editBtn).append(chanePermissionBtn).append(deleteBtn);
             $("<tr></tr>").append(id).append(userKey)
-                .append(permission).append(userNote).append(Btns)
+                .append(permission).append(usedName).append(userNote).append(Btns)
                 .appendTo("#Show_UserPhone_Table tbody");
         })
     }
