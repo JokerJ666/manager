@@ -6,36 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4f57a4-4571-404c-9337-02ed07cac173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/userForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/controller/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/controller/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/controller/SystemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/controller/redirectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/controller/redirectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/interceptor/BanToLoginPageInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/interceptor/BanToLoginPageInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/mapper/system/SystemUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/mapper/system/SystemUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/pojo/SystemUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/pojo/SystemUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/service/system/SystemUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/service/system/SystemUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/service/system/impl/SystemUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/service/system/impl/SystemUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SystemUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SystemUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Company/Main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Company/Main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/System/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/System/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/controller/SystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/controller/SystemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/controller/redirectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/controller/redirectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/mapper/system/SystemUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/mapper/system/SystemUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/pojo/SystemUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/pojo/SystemUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/service/system/SystemUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/service/system/SystemUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/service/system/impl/SystemUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/service/system/impl/SystemUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SystemUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SystemUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/controller/SystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/controller/SystemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/controller/redirectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/controller/redirectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/mapper/system/SystemUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/mapper/system/SystemUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/pojo/SystemUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/pojo/SystemUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/service/system/SystemUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/service/system/SystemUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/service/system/impl/SystemUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/service/system/impl/SystemUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/SystemUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/SystemUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/Company/Main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/Company/Main.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="3d4f57a4-4571-404c-9337-02ed07cac173" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,8 +49,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/System/Login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="4" column="83" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="83" />
+            <state relative-caret-position="420">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -496,7 +470,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568831180172" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568898372859" />
     <property name="last_opened_file_path" value="D:/软件/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -603,18 +577,18 @@
       <option name="presentableId" value="Default" />
       <updated>1568725675353</updated>
       <workItem from="1568725678336" duration="1599000" />
-      <workItem from="1568727323526" duration="31618000" />
+      <workItem from="1568727323526" duration="33712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33217000" />
+    <option name="totallyTimeSpent" value="35311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2578" height="1410" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2663738" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2663738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -627,7 +601,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.1388443" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2070626" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2070626" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -995,8 +969,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/System/Login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="4" column="83" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="83" />
+        <state relative-caret-position="420">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
