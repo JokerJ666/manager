@@ -36,7 +36,14 @@
             data:$("#login_from").serialize(),
             success:function (result) {
                 if(result.code == "200"){
-                    window.location="${ctx}/company";
+                    //window.location="${ctx}/company";
+                    if (result.map.privilege== '1'){
+                        window.location="${ctx}/company";
+                    }else if (result.map.privilege== '2'){
+                        window.location="${ctx}/company/handel/id="+result.map.company;
+                    }else{
+                        alert("账户或者密码错误！");
+                    }
                 }else{
                     alert("账户或者密码错误！");
                 }

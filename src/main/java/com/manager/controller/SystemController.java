@@ -24,7 +24,7 @@ public class SystemController {
         SystemUser user = systemUserService.findSystemUser(systemUser);
         if(user != null){
             request.getSession().setAttribute("user",user);
-            return Msg.success();
+            return Msg.success().add("privilege",user.getPrivilege()).add("company",user.getCompany());
         }
         return Msg.error();
     }

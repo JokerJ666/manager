@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label" for="edit_number">常用人姓名:</label>
+                        <label class="col-sm-3 control-label" for="edit_usedName">常用人姓名:</label>
                         <div class="col-sm-8">
                             <input name="usedName" class="form-control" id="edit_usedName">
                         </div>
@@ -69,6 +69,12 @@
                         <label class="col-sm-3 control-label" for="Add_userNote">备注:</label>
                         <div class="col-sm-8">
                             <input name="note" class="form-control" id="Add_userNote">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="Add_usedName">常用人姓名:</label>
+                        <div class="col-sm-8">
+                            <input name="usedName" class="form-control" id="Add_usedName">
                         </div>
                     </div>
                 </form>
