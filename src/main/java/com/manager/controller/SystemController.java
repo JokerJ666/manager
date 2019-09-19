@@ -21,8 +21,9 @@ public class SystemController {
     @ResponseBody
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public Msg Login(SystemUser systemUser, HttpServletRequest request){
-        if(systemUserService.existByUser(systemUser)){
-            request.getSession().setAttribute("user",systemUser);
+        SystemUser user = systemUserService.findSystemUser(systemUser);
+        if(user != null){
+            request.getSession().setAttribute("user",user);
             return Msg.success();
         }
         return Msg.error();
@@ -45,8 +46,8 @@ public class SystemController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/login/register/save",method = RequestMethod.POST)
-    public Msg SaveUser(@RequestParam(value = "user") SystemUser user){
+    @RequestMapping(value = "/register/save",method = RequestMethod.POST)
+    public Msg SaveUser(SystemUser user){
         if(systemUserService.existUserByUsername(user.getUsername()))
             return Msg.error();
         systemUserService.save(user);

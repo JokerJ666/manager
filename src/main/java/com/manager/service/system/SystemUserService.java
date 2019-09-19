@@ -8,4 +8,6 @@ public interface SystemUserService {
     void save(SystemUser user);
 
     boolean existByUser(SystemUser systemUser);
+
+    SystemUser findSystemUser(SystemUser systemUser);
 }

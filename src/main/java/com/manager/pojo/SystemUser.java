@@ -10,6 +10,10 @@ public class SystemUser {
 
     private String name;
 
+    private Integer privilege;
+
+    private Integer company;
+
     public Integer getId() {
         return id;
     }
@@ -40,5 +44,21 @@ public class SystemUser {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getPrivilege() {
+        return privilege;
+    }
+
+    public void setPrivilege(Integer privilege) {
+        this.privilege = privilege;
+    }
+
+    public Integer getCompany() {
+        return company;
+    }
+
+    public void setCompany(Integer company) {
+        this.company = company;
     }
 }
