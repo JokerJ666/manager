@@ -4,6 +4,7 @@ package com.manager.controller;
 import com.manager.pojo.SystemUser;
 import com.manager.service.system.SystemUserService;
 import com.manager.util.Msg;
+import com.manager.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -47,11 +48,62 @@ public class SystemController {
 
     @ResponseBody
     @RequestMapping(value = "/register/save",method = RequestMethod.POST)
-    public Msg SaveUser(SystemUser user){
+    public Msg SaveUser(SystemUser user, HttpServletRequest request){
+        Msg msg = new Msg();
+        if (StringUtils.isEmpty(user.getName())&&StringUtils.isEmpty(user.getPassword())){
+            msg.setCode(4001);
+            msg.setMsg("请输入需要修改的信息！");
+            return msg;
+        }
         if(systemUserService.existUserByUsername(user.getUsername()))
-            return Msg.error();
+        {
+            systemUserService.update(user);
+            request.getSession().setAttribute("user",user);
+            msg.setCode(200);
+            msg.setMsg("更新用户成功");
+            if (user.getPassword() != null &&user.getPassword() != ""){
+                request.getSession().removeAttribute("user");
+                msg.setMsg("密码修改成功，请重新登录！");
+            }
+            return msg;
+        }
         systemUserService.save(user);
-        return Msg.success();
+        msg.setCode(200);
+        msg.setMsg("保存用户成功");
+        return msg;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/add/newUser",method = RequestMethod.POST)
+    public Msg addUser(SystemUser user){
+        Msg msg = new Msg();
+        if (user.getUsername() == null || user.getUsername() ==""){
+            msg.setCode(4001);
+            msg.setMsg("请输入账号！");
+            return msg;
+        }else if (user.getPassword() == null || user.getPassword() ==""){
+            msg.setCode(4001);
+            msg.setMsg("请输入密码！");
+            return msg;
+        }else if (user.getName() == null || user.getName() ==""){
+            msg.setCode(4001);
+            msg.setMsg("请输入姓名！");
+            return msg;
+        }else if (user.getCompany() == null || user.getCompany() == 0){
+            msg.setCode(4001);
+            msg.setMsg("请选择所属公司！");
+            return msg;
+        }
+        if(systemUserService.existUserByUsername(user.getUsername()))
+        {
+            msg.setCode(4001);
+            msg.setMsg("保存失败，当前用户已存在！");
+            return msg;
+        }
+        systemUserService.save(user);
+        msg.setCode(200);
+        msg.setMsg("保存用户成功");
+        return msg;
     }
 
     @ResponseBody

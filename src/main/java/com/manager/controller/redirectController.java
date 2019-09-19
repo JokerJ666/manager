@@ -30,11 +30,21 @@ public class redirectController {
         return "/Company/Main";
     }
 
-    @RequestMapping(value = "/userForm")
-    public String ToUserForm(Model model){
+    @RequestMapping(value = "/userForm/privilege={privilege}")
+    public String ToUserForm(@PathVariable("privilege")Integer privilege, Model model){
         List<Company> companies = companyService.queryAll();
         model.addAttribute("companies",companies);
         model.addAttribute("page","userForm");
+        model.addAttribute("privilege",privilege);
+        return "/Company/Main";
+    }
+
+    @RequestMapping(value = "/userAdd")
+    public String ToUserAdd(Model model){
+        List<Company> companies = companyService.queryAll();
+        model.addAttribute("companies",companies);
+        model.addAttribute("page","userAdd");
+        model.addAttribute("personal",2);
         return "/Company/Main";
     }
 

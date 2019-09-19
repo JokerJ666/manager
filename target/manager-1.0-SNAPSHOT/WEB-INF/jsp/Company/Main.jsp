@@ -26,8 +26,11 @@
     </a>
     <ul class="dropdown-menu">
         <%--<li><a href="${ctx}/userForm" target="mainFrame" id="personInfo"><i class="icon-user"></i>&nbsp; 个人信息</a></li>--%>
-            <li><a href="${ctx}/userForm" target="mainFrame" id="personInfo"><i class="icon-user"></i>&nbsp; 个人信息</a></li>
-        <li><a href="" target="mainFrame" id="updatePwd"><i class="icon-lock"></i>&nbsp;  修改密码</a></li>
+            <li><a href="${ctx}/userForm/privilege=${ sessionScope.user.privilege}" target="mainFrame" id="personInfo"><i class="icon-user"></i>&nbsp; 个人信息</a></li>
+            <c:if test="${sessionScope.user.privilege==1}">
+                <li><a href="${ctx}/userAdd" target="mainFrame" id="userAdd"><i class="icon-lock"></i>&nbsp;  新增用户</a></li>
+            </c:if>
+
     </ul>
 </li>
 
@@ -82,6 +85,10 @@
 </c:if>
 <c:if test="${page=='userForm'}">
     <jsp:include page="../User/userForm.jsp"/>
+</c:if>
+
+<c:if test="${page=='userAdd'}">
+    <jsp:include page="../User/userAdd.jsp"/>
 </c:if>
 </body>
 </html>

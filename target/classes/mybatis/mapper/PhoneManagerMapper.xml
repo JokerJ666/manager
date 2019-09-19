@@ -12,7 +12,8 @@
         userKey,
         createDate,
         note,
-        companyId
+        companyId,
+        usedName
     </sql>
 
     <!-- 字段值 -->
@@ -20,7 +21,8 @@
         #{userKey},
         #{createDate},
         #{note},
-        #{companyId}
+        #{companyId},
+        #{usedName}
     </sql>
 
     <resultMap id="PhoneUserResultMap" type="com.manager.pojo.PhoneManager">
@@ -31,6 +33,7 @@
         <result column="note" property="note"/>
         <result column="permission" property="permission"/>
         <result column="companyId" property="companyId"/>
+        <result column="usedName" property="usedName"/>
         <association property="company"
                      select="com.manager.mapper.manager.CompanyMapper.queryById" column="companyId">
         </association>
@@ -112,6 +115,9 @@
             </if>
             <if test="companyId!=''and companyId!=null ">
                 companyId=#{companyId},
+            </if>
+            <if test="usedName!=''and usedName!=null ">
+                usedName=#{usedName},
             </if>
         </set>
         where

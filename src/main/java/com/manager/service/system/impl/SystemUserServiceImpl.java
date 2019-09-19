@@ -21,6 +21,10 @@ public class SystemUserServiceImpl implements SystemUserService {
         systemUserMapper.save(user);
     }
 
+    public int update(SystemUser user){
+        return systemUserMapper.update(user);
+    }
+
     public boolean existByUser(SystemUser systemUser) {
         return systemUserMapper.existByUser(systemUser)==1;
     }

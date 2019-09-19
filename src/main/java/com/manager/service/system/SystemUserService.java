@@ -7,6 +7,8 @@ public interface SystemUserService {
 
     void save(SystemUser user);
 
+    int update(SystemUser user);
+
     boolean existByUser(SystemUser systemUser);
 
     SystemUser findSystemUser(SystemUser systemUser);

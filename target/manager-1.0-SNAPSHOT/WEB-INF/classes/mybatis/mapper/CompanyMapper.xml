@@ -16,7 +16,9 @@
         remainingTime,
         maintainNum,
         managerPhone,
-        address
+        address,
+        cloudServerInformation,
+        amountPackage
     </sql>
 
     <sql id="FieldValue">
@@ -28,7 +30,9 @@
         #{remainingTime},
         #{maintainNum},
         #{managerPhone},
-        #{address}
+        #{address},
+        #{cloudServerInformation},
+        #{amountPackage}
     </sql>
 
     <select id="queryById" resultType="com.manager.pojo.Company">
@@ -111,6 +115,12 @@
             </if>
             <if test="remainingTime!=null ">
                 remainingTime=#{remainingTime},
+            </if>
+            <if test="cloudServerInformation!=null ">
+                cloudServerInformation=#{cloudServerInformation},
+            </if>
+            <if test="amountPackage!=null ">
+                amountPackage=#{amountPackage},
             </if>
         </set>
         where id=#{id}
