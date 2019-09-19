@@ -4,38 +4,35 @@ import java.util.Date;
 
 
 public class PhoneManager {
-    @Override
-    public String toString() {
-        return "PhoneManager{" +
-                "id=" + id +
-                ", state='" + state + '\'' +
-                ", userKey='" + userKey + '\'' +
-                ", createDate=" + createDate +
-                ", permission='" + permission + '\'' +
-                ", note='" + note + '\'' +
-                ", lastLoginTime='" + lastLoginTime + '\'' +
-                ", companyId=" + companyId +
-                ", company=" + company +
-                '}';
-    }
 
     private Integer id;
 
     private String state;
 
-    private String userKey;
+    private String userKey;//串号
 
-    private Date createDate;
+    private Date createDate;//创建时间
 
-    private String permission;
+    private String permission;//状态
 
-    private String note;
+    private String note;//备注
 
-    private String lastLoginTime;
+    private String lastLoginTime;//上次登录时间
 
-    private Integer companyId;
+    private Integer companyId;//公司id
+
+    private String usedName;//常用人姓名
 
     private Company company;
+
+
+    public String getUsedName() {
+        return usedName;
+    }
+
+    public void setUsedName(String usedName) {
+        this.usedName = usedName;
+    }
 
     public Integer getId() {
         return id;
@@ -107,5 +104,21 @@ public class PhoneManager {
 
     public void setPermission(String permission) {
         this.permission = permission;
+    }
+
+    @Override
+    public String toString() {
+        return "PhoneManager{" +
+                "id=" + id +
+                ", state='" + state + '\'' +
+                ", userKey='" + userKey + '\'' +
+                ", createDate=" + createDate +
+                ", permission='" + permission + '\'' +
+                ", note='" + note + '\'' +
+                ", lastLoginTime='" + lastLoginTime + '\'' +
+                ", companyId=" + companyId +
+                ", usedName='" + usedName + '\'' +
+                ", company=" + company +
+                '}';
     }
 }
