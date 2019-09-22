@@ -6,43 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd457e5b-a058-4b55-bd99-eed8146b39c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/utils/StringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/userAdd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/controller/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/controller/SystemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/controller/redirectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/controller/redirectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/mapper/system/SystemUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/mapper/system/SystemUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/service/system/SystemUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/service/system/SystemUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/service/system/impl/SystemUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/service/system/impl/SystemUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SystemUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SystemUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Company/Main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Company/Main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/userForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/userForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/controller/SystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/controller/SystemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/controller/redirectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/controller/redirectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/mapper/system/SystemUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/mapper/system/SystemUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/pojo/PhoneManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/pojo/PhoneManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/service/system/SystemUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/service/system/SystemUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/service/system/impl/SystemUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/service/system/impl/SystemUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/CompanyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/PhoneManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/PhoneManagerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/SystemUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/SystemUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/controller/SystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/controller/SystemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/controller/redirectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/controller/redirectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/mapper/system/SystemUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/mapper/system/SystemUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/pojo/PhoneManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/pojo/PhoneManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/service/system/SystemUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/service/system/SystemUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/service/system/impl/SystemUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/com/manager/service/system/impl/SystemUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/CompanyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/PhoneManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/PhoneManagerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/SystemUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/SystemUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/Company/HandelCompany.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/Company/HandelCompany.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/Company/Main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/Company/Main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/User/phoneUserForComapny.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/User/phoneUserForComapny.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/User/userForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager-1.0-SNAPSHOT/WEB-INF/jsp/User/userForm.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="fd457e5b-a058-4b55-bd99-eed8146b39c5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,15 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/manager/pojo/SystemUser.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/manager/controller/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-              <folding>
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#564#565#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="336">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -68,44 +28,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="2" column="24" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
-              <folding>
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-                <element signature="e#419#420#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/userForm.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="71" column="18" lean-forward="true" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="3150">
+              <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/manager/mapper/system/SystemUserMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/SystemUserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+            <state relative-caret-position="420">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -113,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Company/ListCompany.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
+            <state relative-caret-position="2184">
               <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="94" />
             </state>
           </provider>
@@ -122,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Company/Main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+            <state relative-caret-position="1218">
+              <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -131,21 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/userAdd.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
+            <state relative-caret-position="3318">
               <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/manager/controller/redirectController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -153,11 +80,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/manager/controller/SystemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="1932">
               <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -248,7 +184,22 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="manager" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="manager" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="manager" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -591,13 +542,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3d4f57a4-4571-404c-9337-02ed07cac173" name="Default Changelist" comment="" />
+      <changelist id="fd457e5b-a058-4b55-bd99-eed8146b39c5" name="Default Changelist" comment="" />
       <created>1568725675353</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568725675353</updated>
       <workItem from="1568725678336" duration="1599000" />
       <workItem from="1568727323526" duration="41179000" />
+      <workItem from="1569157304597" duration="225000" />
     </task>
     <servers />
   </component>
@@ -608,7 +560,7 @@
     <frame x="-9" y="-9" width="2578" height="1410" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22204472" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22444089" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -616,12 +568,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32985553" />
-      <window_info anchor="bottom" id="Messages" weight="0.32985553" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32985553" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.1388443" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.27447832" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.27367577" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -632,10 +582,12 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.32985553" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.32985553" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.073083065" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.14097445" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="JSF" order="6" />
@@ -645,6 +597,9 @@
       <window_info anchor="right" id="CDI" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myShow1" value="true" />
@@ -700,8 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="420">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -742,26 +697,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Company/ListCompany.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="2184">
           <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/userAdd.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
+        <state relative-caret-position="3318">
           <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Company/Main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+        <state relative-caret-position="1218">
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -769,12 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
-          <folding>
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,7 +736,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/manager/controller/SystemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="1932">
           <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -801,13 +746,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/User/userForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="71" column="18" lean-forward="true" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="3150">
+          <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/manager/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>

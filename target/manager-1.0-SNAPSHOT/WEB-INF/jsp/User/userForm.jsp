@@ -69,7 +69,7 @@
                     window.location="${ctx}/company";
                 }else if (result.code=="4001"){
                     alert(result.msg);
-                } 
+                }
                 else
                     alert("保存失败!");
             }
