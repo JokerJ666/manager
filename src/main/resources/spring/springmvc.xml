@@ -18,7 +18,7 @@
     <context:annotation-config/>
 
     <!--拦截器-->
-    <mvc:interceptors>
+<!--    <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**/"/>
             <mvc:exclude-mapping path="/login"/>
@@ -32,7 +32,7 @@
             <mvc:mapping path="/"/>
             <bean class="com.manager.interceptor.BanToLoginPageInterceptor"/>
         </mvc:interceptor>
-    </mvc:interceptors>
+    </mvc:interceptors>-->
 
 
     <!-- 处理器映射器和适配器 -->

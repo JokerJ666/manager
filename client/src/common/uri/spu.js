@@ -1,0 +1,11 @@
+exports.getSpuData = 'snp/api/spu/getData'
+exports.editSpu = 'snp/api/spu/edit'
+exports.pushSpu = 'snp/api/spu/push'
+exports.getBrands = 'snp/api/spu/getBrands'
+exports.getDistributors = 'snp/api/spu/getDistributors'
+exports.changeStatus = 'snp/api/spu/changeStatus'
+exports.getDistributorMappings = 'snp/api/spu/getDistributorMappings'
+exports.getAllDistributors = 'snp/api/spu/getAllDistributors'
+exports.saveDistributorMapping = "snp/api/spu/saveDistributorMapping"
+exports.createSpu = 'snp/api/spu/createSpu'
+exports.pushAfterChange = 'snp/api/spu/pushAfterChange'

@@ -1,0 +1,1 @@
+exports.loginTest = '/company/test'

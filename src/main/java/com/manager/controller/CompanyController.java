@@ -47,6 +47,15 @@ public class CompanyController {
     }
 
     @ResponseBody
+    @RequestMapping(value = "/test",method = RequestMethod.POST)
+    public Msg test(){
+        Msg msg = new Msg();
+        msg.setMsg("调用成功");
+        msg.setCode(1000);
+        return msg;
+    }
+
+    @ResponseBody
     @RequestMapping(value = "/getData/id={id}",method = RequestMethod.GET)
     public Msg queryById(@PathVariable("id")Integer id){
         Company company = companyService.queryById(id);

@@ -1,0 +1,8 @@
+exports.getHotelList = 'operate/api/skuPacket/getHotelList'
+exports.searchData = 'operate/api/skuPacket/searchData'
+exports.editData = 'operate/api/skuPacket/editData'
+exports.createProduct = 'operate/api/skuPacket/createProduct'
+exports.refuse = 'operate/api/skuPacket/refuse'
+exports.createLink = 'operate/api/skuPacket/createLink'
+exports.getDetails = 'operate/api/skuPacket/getDetails'
+exports.getUserInfo = 'operate/api/skuPacket/getUserInfo'
